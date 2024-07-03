@@ -1,17 +1,33 @@
 import React, { useState } from 'react';
 import styles from '../css/Navbar.module.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaLocationArrow, FaGlobe, FaCode, FaMobileAlt, FaShoppingCart  } from 'react-icons/fa';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function HeroNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [hideTimeout, setHideTimeout] = useState(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleMegaMenu = () => {
-    setIsMegaMenuOpen(!isMegaMenuOpen);
+  const showMegaMenu = (menu) => {
+    if (hideTimeout) {
+      clearTimeout(hideTimeout);
+    }
+    setActiveMenu(menu);
+    setIsMegaMenuOpen(true);
+  };
+
+  const hideMegaMenu = () => {
+    if (hideTimeout) {
+      clearTimeout(hideTimeout);
+    }
+    setHideTimeout(setTimeout(() => {
+      setIsMegaMenuOpen(false);
+    }, 3000)); // 3 seconds delay
   };
 
   return (
@@ -27,37 +43,69 @@ function HeroNavbar() {
         </div>
         <ul className={`${styles.navLinks} ${isOpen ? styles.active : ''}`}>
           <li><a href="#aboutus">About us</a></li>
-          <li><a href="#cases">Cases</a></li>
-          <li onMouseEnter={toggleMegaMenu} onMouseLeave={toggleMegaMenu}>
+          <li
+            onMouseEnter={() => showMegaMenu('services')}
+            onMouseLeave={hideMegaMenu}
+          >
             <a href="#services">Services</a>
-            {isMegaMenuOpen && (
+            {isMegaMenuOpen && activeMenu === 'services' && (
               <div className={styles.megaMenu}>
-                <div>
-                  <h4>Mobile Development</h4>
-                  <p>Frontend Development</p>
-                </div>
-                <div>
-                  <h4>Backend Development</h4>
-                  <p>Web Development</p>
-                </div>
-                <div>
-                  <h4>Team Augmentation</h4>
-                  <p>Project Management</p>
-                </div>
+                <div className={styles.megaMenuItem}>Web Design and Development</div>
+                <div className={styles.megaMenuItem}>Wordpress</div>
+                <div className={styles.megaMenuItem}>Web Applications</div>
+                <div className={styles.megaMenuItem}>Mobile Applications</div>
+                <div className={styles.megaMenuItem}>Desktop Applications</div>
+                <div className={styles.megaMenuItem}>Graphic Designing</div>
+                <div className={styles.megaMenuItem}>Content Writing</div>
+                <div className={styles.megaMenuItem}>SEO</div>
+                <div className={styles.megaMenuItem}>Smart Contracts</div>
+                <div className={styles.megaMenuItem}>Magento</div>
+                <div className={styles.megaMenuItem}>Shopify Plus</div>
+                <div className={styles.megaMenuItem}>Shopify</div>
               </div>
             )}
           </li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#blog" className={styles.blogLink}>Blog <span className={styles.dot}>•</span></a></li>
-          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#contacts">Contacts</a><span className={styles.dot}>•</span></li>
         </ul>
         <button className={styles.chatButton}>Let's chat</button>
       </nav>
-      {/* <div className={styles.heroContent}>
-        <h1>Welcome to TechXudo</h1>
-        <p>Innovative solutions for your tech needs</p>
-      </div> */}
+
+      <div className={styles.heroContent}>
+        <div className={styles.locationinfoContainer}>
+          <span className={styles.locationIcon}><FaLocationArrow /></span>
+          <span style={{ fontWeight: 'normal' }}>Based in <span style={{ fontWeight: 'bold' }}>UK</span> Operate <span style={{ fontWeight: 'bold' }}>worldwide</span></span>
+          <span className={styles.globeIcon}><FaGlobe /></span>
+        </div>
+
+        <div className={styles.heroTitleContainer}>
+          <h1 className={styles.heroTitle}>
+            Empower your business
+            <br />with <span className={styles.gradientText}>top-class software development</span>
+          </h1>
+        </div>
+
+        <div className={styles.cardContainer}>
+          <div className={styles.card}>
+            <FaCode className={styles.icon} />
+            <h3>Custom software development </h3>
+            <p>Build software tailored to your business</p>
+            <AiOutlineArrowRight className={styles.arrow} />
+          </div>
+          <div className={styles.card}>
+            <FaMobileAlt className={styles.icon} />
+            <h3>Mobile Apps</h3>
+            <p>Develop seamless mobile applications.</p>
+            <AiOutlineArrowRight className={styles.arrow} />
+          </div>
+          <div className={styles.card}>
+            <FaShoppingCart className={styles.icon} />
+            <h3>E-commerce Development</h3>
+            <p>Build robust e-commerce platforms.</p>
+            <AiOutlineArrowRight className={styles.arrow} />
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }
