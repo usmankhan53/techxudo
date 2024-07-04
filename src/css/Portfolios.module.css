@@ -1,0 +1,120 @@
+.portfolios {
+    padding: 2rem;
+    background-image: url('./bg.png'); /* Replace with your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeIn 1s ease-out; /* Animation for fading in the section */
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+    border-radius: 12px; /* Rounded corners for heading */
+    padding: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 1s; /* Animation for bouncing in the heading */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .content {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(20px); /* For WebKit browsers */
+    border-radius: 12px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #bbbbbb;
+  }
+  
+  .rating {
+    display: flex;
+    gap: 0.2rem; /* Space between stars */
+    margin-top: 0.5rem;
+  }
+  
+  .star {
+    font-size: 1.5rem; /* Star size */
+    color: #ddd; /* Default star color */
+    transition: color 0.3s ease;
+  }
+  
+  .star.filled {
+    color: #ffcc00; /* Filled star color */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; /* Single column on small screens */
+    }
+  
+    .heading {
+      font-size: 1.5rem;
+    }
+  }
+  

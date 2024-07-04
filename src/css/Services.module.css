@@ -1,0 +1,170 @@
+.services {
+    background-image: url('./bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+  }
+  
+  .title {
+   text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+    border-radius: 12px; /* Rounded corners for heading */
+    padding: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .servicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .serviceCard {
+    background: rgba(197, 190, 190, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.41);
+    padding: 1.5rem;
+    flex: 1 1 calc(50% - 1.5rem);
+    box-sizing: border-box;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .serviceCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none; 
+    cursor: pointer;
+  }
+  
+  .serviceCard h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #ffffff;
+  }
+  
+  .serviceCard p {
+    font-size: 0.875rem;
+    color: #ffffff;
+    margin: 1rem 0;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tags span {
+    color: white;
+    background: rgba(25, 25, 25, 0.554);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+    -webkit-backdrop-filter: blur(10.8px);
+    border: 1px solid rgba(255, 255, 255, 0.41);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .iconContainer {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .iconContainer:hover svg {
+    transform: scale(1.2) rotate(15deg);
+    
+  }
+  
+  .iconContainer svg {
+    font-size: 3rem; /* Increase icon size */
+    color: #ffffff;
+    animation: bounce 2s infinite, pulse 1.5s infinite; /* Add attention-seeking animation */
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .button {
+    color: white;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+    -webkit-backdrop-filter: blur(10.8px);
+    border: 1px solid rgba(255, 255, 255, 0.41);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #006bb6;
+    transform: scale(1.05);
+  }
+  
+  .button span {
+    margin-left: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .serviceCard {
+      flex: 1 1 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+    
+    .iconContainer {
+      right: 1rem;
+      top: 1rem;
+    }
+  }
+  

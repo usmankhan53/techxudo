@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../css/Navbar.module.css';
+import styles from '../css/Hero.module.css';
 import { FaBars, FaTimes, FaLocationArrow, FaGlobe, FaCode, FaMobileAlt, FaShoppingCart  } from 'react-icons/fa';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 

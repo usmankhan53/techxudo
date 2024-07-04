@@ -1,0 +1,171 @@
+.technologies {
+    padding: 2rem;
+    background-image: url('./bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeIn 1s ease-out; /* Animation for fading in the section */
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+    border-radius: 12px; /* Rounded corners for heading */
+    padding: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s; /* Animation for bouncing in the heading */
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center; /* Center tabs horizontally */
+    flex-wrap: wrap;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Light border for tabs */
+    padding-bottom: 1rem;
+  }
+  
+  .tab {
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    color: white;
+    border-radius: 12px; /* Slightly rounded corners for tabs */
+    margin: 0 0.5rem;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tab:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly darker on hover */
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .activeTab {
+    border-color: #006bb6; /* Color of the border when the tab is active */
+    animation: pulse 1s infinite; /* Pulse animation for active tab */
+  }
+  
+  .content {
+    margin-top: 2rem;
+    text-align: center; /* Center align text in content */
+    background: rgba(255, 255, 255, 0.1); /* Light background for content */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+    border-radius: 16px; /* Rounded corners for content */
+    padding: 1.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center; /* Center align icons */
+    flex-wrap: wrap;
+  }
+  
+  .icon {
+    font-size: 2rem; /* Increased icon size */
+    color: #ffffff; /* Icon color */
+    margin: 0.5rem;
+    border: 2px solid #ffffff; /* Icon border color */
+    border-radius: 50%;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+     animation: bounce 2s infinite; /* Apply bounce animation */
+  }
+  
+  .icon:hover {
+    transform: scale(1.2); /* Scale up icon on hover */
+  }
+  
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    .tabs {
+      flex-direction: column;
+      align-items: center; /* Center align tabs vertically on smaller screens */
+    }
+  
+    .tab {
+      margin-bottom: 1rem;
+    }
+  
+    .content {
+      margin-top: 1rem;
+    }
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      border-color: #006bb6;
+    }
+    50% {
+      border-color: #ffffff;
+    }
+    100% {
+      border-color: #006bb6;
+    }
+  }
+  
