@@ -6,7 +6,7 @@ function Reviews() {
   const [reviews] = useState([
     {
       name: 'Avis Brown',
-      image: '/images/avis.png', // Replace with actual image path or leave empty for default avatar
+      image: '/images/Avis.png', // Replace with actual image path or leave empty for default avatar
       text: 'I highly recommend Syed’s service. His website design exceeded my expectations.'
     },
     {
@@ -31,7 +31,7 @@ function Reviews() {
       },
       {
         name: 'DayMonesha',
-        image: '/images/dymonesha.png',
+        image: '/images/Dymonesha.png',
         text: "Syed is a great person to work with. He goes above and beyond to complete asthethically pleasing website designs."
       },
       {
