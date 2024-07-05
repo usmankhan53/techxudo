@@ -3,14 +3,46 @@ import styles from '../css/Industry.module.css';
 import { FaStethoscope, FaDollarSign, FaLaptop, FaShoppingCart, FaCloud, FaBriefcase, FaFilm, FaRobot } from 'react-icons/fa';
 
 const industries = [
-  { title: "Healthcare", icon: <FaStethoscope className={styles.icon} />, content: "Innovative solutions for the healthcare industry, enhancing patient care and operational efficiency." },
-  { title: "Finance", icon: <FaDollarSign className={styles.icon} />, content: "Financial technology services that drive digital transformation in the finance sector." },
-  { title: "Technology", icon: <FaLaptop className={styles.icon} />, content: "Cutting-edge technology solutions to drive growth and innovation." },
-  { title: "Retail and E-commerce", icon: <FaShoppingCart className={styles.icon} />, content: "Solutions for retail and e-commerce to enhance customer experience and streamline operations." },
-  { title: "SaaS", icon: <FaCloud className={styles.icon} />, content: "Software as a Service solutions to deliver scalable and efficient software products." },
-  { title: "Business services", icon: <FaBriefcase className={styles.icon} />, content: "Business services solutions to optimize operations and drive business success." },
-  { title: "Media and entertainment", icon: <FaFilm className={styles.icon} />, content: "Innovative media and entertainment solutions to captivate and engage audiences." },
-  { title: "AI", icon: <FaRobot className={styles.icon} />, content: "AI-driven solutions to revolutionize industries and create smarter applications." }
+  { 
+    title: "Healthcare", 
+    icon: <FaStethoscope style={{ color: '#28a745' }} className={styles.icon} />, 
+    content: "Innovative solutions for the healthcare industry, enhancing patient care and operational efficiency." 
+  },
+  { 
+    title: "Finance", 
+    icon: <FaDollarSign style={{ color: '#17a2b8' }} className={styles.icon} />, 
+    content: "Financial technology services that drive digital transformation in the finance sector." 
+  },
+  { 
+    title: "Technology", 
+    icon: <FaLaptop style={{ color: '#007bff' }} className={styles.icon} />, 
+    content: "Cutting-edge technology solutions to drive growth and innovation." 
+  },
+  { 
+    title: "E-commerce", 
+    icon: <FaShoppingCart style={{ color: '#ffc107' }} className={styles.icon} />, 
+    content: "Solutions for retail and e-commerce to enhance customer experience and streamline operations." 
+  },
+  { 
+    title: "SaaS", 
+    icon: <FaCloud style={{ color: '#6610f2' }} className={styles.icon} />, 
+    content: "Software as a Service solutions to deliver scalable and efficient software products." 
+  },
+  { 
+    title: "Business", 
+    icon: <FaBriefcase style={{ color: '#e83e8c' }} className={styles.icon} />, 
+    content: "Business services solutions to optimize operations and drive business success." 
+  },
+  { 
+    title: "Entertainment", 
+    icon: <FaFilm style={{ color: '#fd7e14' }} className={styles.icon} />, 
+    content: "Innovative media and entertainment solutions to captivate and engage audiences." 
+  },
+  { 
+    title: "AI", 
+    icon: <FaRobot style={{ color: '#6f42c1' }} className={styles.icon} />, 
+    content: "AI-driven solutions to revolutionize industries and create smarter applications." 
+  }
 ];
 
 function Industry() {

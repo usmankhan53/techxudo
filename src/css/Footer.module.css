@@ -1,0 +1,123 @@
+/* General Footer Styles */
+.footer {
+   
+    background-image: url('./bg1.png'); /* Replace with your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+   
+    color: #ffffff;
+ 
+    text-align: center;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Section Styles */
+.section {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.section:not(:last-child)::after {
+    content: '|';
+    position: absolute;
+    right: -1rem; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff; /* Color of the vertical line */
+}
+
+/* Logo */
+.logoContainer {
+    text-align: center;
+}
+
+.logo {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Contact Details */
+.contactDetails h2, .address h2, .socialMedia h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Primary color */
+}
+
+.contactDetails p, .address p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contactDetails p svg, .address p svg {
+    margin-right: 0.5rem;
+    /* color: #006bb6; Primary color */
+}
+
+/* Social Media */
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.socialIcons svg {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.socialIcons svg:hover {
+    color: #006bb6; /* Primary color */
+}
+
+/* Footer Bottom */
+.footerBottom {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .section::after {
+        display: none;
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size for smaller screens */
+    }
+
+    .socialIcons {
+        flex-direction: row; /* Align social icons in a row on smaller screens */
+        gap: 0.5rem;
+    }
+
+    .footerBottom {
+        font-size: 0.8rem;
+    }
+}

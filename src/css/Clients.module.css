@@ -1,0 +1,122 @@
+.clients {
+    padding: 2rem;
+    background-image: url('./bg1.png'); /* Replace with your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s;
+  }
+  
+  .slider {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .slideTrack {
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .slide {
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin: 0 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.5s ease-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+
+  .slide svg {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .slide {
+      font-size: 1rem;
+      padding: 0.5rem 0.5rem;
+    }
+  
+    .slide svg {
+      font-size: 1.5rem;
+    }
+  }
+  

@@ -1,162 +1,167 @@
 .industry {
-    padding: 2rem;
-    background-image: url('./bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation: fadeIn 1s ease-out; /* Animation for fading in the entire section */
-  }
-  
-  .heading {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
-    border-radius: 12px; /* Rounded corners for heading */
-    padding: 0.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    animation: bounceIn 1s; /* Animation for bouncing in the heading */
-  }
-  
+  padding: 2rem;
+  background-image: url('./bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fadeIn 1s ease-out; /* Animation for fading in the entire section */
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+  border-radius: 12px; /* Rounded corners for heading */
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: bounceIn 1s; /* Animation for bouncing in the heading */
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap to the next line */
+  justify-content: center; /* Center tabs horizontally */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Light border for tabs */
+  padding-bottom: 1rem;
+  gap: 1rem; /* Add gap between tabs */
+}
+
+.tab {
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  color: white;
+  border-radius: 12px; /* Slightly rounded corners for tabs */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.5s ease-out; /* Animation for tabs fading and sliding up */
+  flex: 1 1 calc(20% - 1rem); /* Ensure consistent width for tabs */
+  max-width: 200px; /* Set a maximum width for tabs */
+}
+
+.tab:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly darker on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.activeTab {
+  border-color: #006bb6; /* Color of the border when the tab is active */
+  animation: pulse 1s infinite; /* Pulse animation for active tab */
+}
+
+.icon {
+  font-size: 2.5rem; /* Increased icon size */
+  color: #ffffff; /* Icon color */
+  margin-bottom: 0.5rem;
+  border: 2px solid #ffffff; /* Icon border color */
+  border-radius: 50%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.tab:hover .icon {
+  transform: rotate(15deg); /* Rotate icon on tab hover */
+}
+
+.content {
+  margin-top: 2rem;
+  text-align: center; /* Center align text in content */
+  background: rgba(255, 255, 255, 0.1); /* Light background for content */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+  border-radius: 16px; /* Rounded corners for content */
+  padding: 1.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out; /* Animation for content fading and sliding up */
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #dddddd;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
   .tabs {
-    display: flex;
-    justify-content: center; /* Center tabs horizontally */
+    flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Light border for tabs */
-    padding-bottom: 1rem;
+    justify-content: space-between; /* Ensure tabs are spaced out */
   }
-  
+
   .tab {
-    cursor: pointer;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    color: white;
-    border-radius: 12px; /* Slightly rounded corners for tabs */
-    margin: 0 0.5rem;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    animation: fadeInUp 0.5s ease-out; /* Animation for tabs fading and sliding up */
-  }
-  
-  .tab:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Slightly darker on hover */
-    transform: scale(1.05); /* Scale up on hover */
-  }
-  
-  .activeTab {
-    border-color: #006bb6; /* Color of the border when the tab is active */
-    animation: pulse 1s infinite; /* Pulse animation for active tab */
-  }
-  
-  .icon {
-    font-size: 2.5rem; /* Increased icon size */
-    color: #ffffff; /* Icon color */
-    margin-bottom: 0.5rem;
-    border: 2px solid #ffffff; /* Icon border color */
-    border-radius: 50%;
-    padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease; /* Smooth transform on hover */
-  }
-  
-  .tab:hover .icon {
-    transform: rotate(15deg); /* Rotate icon on tab hover */
-  }
-  
-  .content {
-    margin-top: 2rem;
-    text-align: center; /* Center align text in content */
-    background: rgba(255, 255, 255, 0.1); /* Light background for content */
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
-    border-radius: 16px; /* Rounded corners for content */
-    padding: 1.5rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    animation: fadeInUp 1s ease-out; /* Animation for content fading and sliding up */
-  }
-  
-  .content h2 {
-    font-size: 1.5rem;
+    flex: 1 1 calc(20% - 1rem); /* Ensure 5 tabs per row with margin adjustment */
     margin-bottom: 1rem;
-    color: #ffffff;
+    max-width: none; /* Remove max-width for smaller screens */
   }
-  
-  .content p {
-    font-size: 1rem;
-    color: #dddddd;
+
+  .content {
+    margin-top: 1rem;
   }
-  
-  @media (max-width: 768px) {
-    .tabs {
-      flex-direction: column;
-      align-items: center; /* Center align tabs vertically on smaller screens */
-    }
-  
-    .tab {
-      margin-bottom: 1rem;
-    }
-  
-    .content {
-      margin-top: 1rem;
-    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Keyframes for animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  @keyframes bounceIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.3);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @keyframes pulse {
-    0% {
-      border-color: #006bb6;
-    }
-    50% {
-      border-color: #ffffff;
-    }
-    100% {
-      border-color: #006bb6;
-    }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
   }
-  
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    border-color: #006bb6;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+  100% {
+    border-color: #006bb6;
+  }
+}

@@ -1,0 +1,180 @@
+/* General Styles */
+.reviews {
+    padding: 2rem;
+    background-image: url('./bg.png'); /* Replace with your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s;
+  }
+  
+  .slider {
+    overflow: hidden; /* Prevent horizontal overflow */
+    width: 100%;
+    position: relative;
+  }
+  
+  .slideTrack {
+    display: flex;
+    width: calc(200%); /* Double the width to ensure a smooth scroll */
+    animation: scroll 60s linear infinite;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 3 - 1rem); /* Adjust based on how many reviews you want to display at once */
+    padding: 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin: 0 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.5s ease-out;
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .review {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar, .defaultAvatar {
+    width: 80px; /* Ensure correct size */
+    height: 80px; /* Ensure correct size */
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Ensure the image scales correctly */
+  }
+  
+  .defaultAvatar {
+    font-size: 80px; /* Adjust font size if needed */
+  }
+  
+  .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    white-space: normal; /* Allow text to wrap */
+    word-break: break-word; /* Break long words */
+    overflow: hidden; /* Ensure long text does not overflow the card */
+    box-sizing: border-box; /* Include padding in the element's total width */
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .star {
+    color: gold;
+    margin: 0 0.1rem;
+    font-size: 1.5rem; /* Adjust size to fit within the card */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Media Queries for Small Screens */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .slide {
+      font-size: 1rem;
+      padding: 0.5rem;
+      width: calc(100% - 1rem); /* Adjust for small screens */
+      margin: 0 0.5rem; /* Center alignment */
+    }
+  
+    .avatar, .defaultAvatar {
+      width: 60px;
+      height: 60px;
+      font-size: 60px;
+    }
+  
+    .name {
+      font-size: 1rem;
+    }
+  
+    .text {
+      font-size: 0.9rem;
+    }
+  }
+  

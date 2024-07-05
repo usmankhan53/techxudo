@@ -1,0 +1,135 @@
+/* General Styles for Form */
+.formContainer {
+    display: flex;
+    flex-direction: row; /* Ensure that items are in a row */
+    padding: 2rem;
+    background-image: url('./bg.png'); /* Replace with your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between; /* Space between form and new section */
+    align-items: center; /* Center items vertically */
+}
+
+.formWrapper {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border-radius: 12px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 60%; /* Adjust width as needed */
+    max-width: 600px; /* Max width for larger screens */
+    box-sizing: border-box;
+}
+
+.formTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.inputGroup {
+    margin-bottom: 1rem;
+}
+
+.inputLabel {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.inputField {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.submitButton {
+    background: #006bb6; /* Primary color */
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+    background: #0079cf; /* Darker shade for hover */
+}
+
+/* New Section Styles */
+.infoSection {
+    width: 100%; /* Adjust width as needed */
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border-radius: 12px;
+    padding: 2rem;
+    margin-left: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.infoText {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.infoList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.infoListItem {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.infoListItem::before {
+    content: '•'; /* Bullet point */
+    color: #ff6347; /* Primary color */
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .formContainer {
+        flex-direction: column; /* Stack form and info section vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .formWrapper {
+        width: 90%; /* Full width on small screens */
+        max-width: none; /* Remove max-width for small screens */
+    }
+
+    .infoSection {
+        width: 90%; /* Full width on small screens */
+        margin-top: 2rem; /* Add margin to separate from the form */
+        
+    }
+}
