@@ -3,7 +3,7 @@ import styles from '../css/Technologies.module.css';
 
 // Icons for the different technologies
 import { FaAndroid, FaApple, FaReact, FaAngular, FaNodeJs, FaWordpress, FaShopify, FaMagento, FaHtml5, FaCss3, FaJsSquare, FaPython, FaJava } from 'react-icons/fa';
-import { SiFigma, SiAdobe, SiSass, SiTypescript, SiBootstrap, SiTailwindcss, SiNextdotjs, SiNuxtdotjs, SiGraphql, SiDjango, SiRuby, SiPhp, SiKotlin, SiReactrouter, SiFlutter } from 'react-icons/si';
+import { SiFigma, SiAdobe, SiSass, SiTypescript, SiBootstrap, SiTailwindcss, SiNextdotjs, SiNuxtdotjs, SiGraphql, SiDjango, SiRuby, SiPhp, SiKotlin, SiReactrouter, SiFlutter, SiEthereum, SiSolidity, SiWeb3Dotjs, SiIpfs } from 'react-icons/si';
 
 // Color mapping for icons
 const iconColors = {
@@ -33,7 +33,11 @@ const iconColors = {
   FaPython: '#306998', // Python Blue
   FaShopify: '#7AB55C', // Shopify Green
   FaMagento: '#F45D22', // Magento Orange
-  FaWordpress: '#21759B' // WordPress Blue
+  FaWordpress: '#21759B', // WordPress Blue
+  SiEthereum: '#3C3C3D', // Ethereum Gray
+  SiSolidity: '#3C3C3D', // Solidity Gray
+  SiWeb3Dotjs: '#F16822', // Web3.js Orange
+  SiIpfs: '#65C2CB' // IPFS Cyan
 };
 
 function Technologies() {
@@ -86,6 +90,15 @@ function Technologies() {
         { icon: <FaShopify key="shopify" />, color: iconColors.FaShopify },
         { icon: <FaMagento key="magento" />, color: iconColors.FaMagento },
         { icon: <FaWordpress key="wordpress" />, color: iconColors.FaWordpress }
+      ]
+    },
+    web3: {
+      title: 'Web3',
+      icons: [
+        { icon: <SiEthereum key="ethereum" />, color: iconColors.SiEthereum },
+        { icon: <SiSolidity key="solidity" />, color: iconColors.SiSolidity },
+        { icon: <SiWeb3Dotjs key="web3js" />, color: iconColors.SiWeb3Dotjs },
+        { icon: <SiIpfs key="ipfs" />, color: iconColors.SiIpfs }
       ]
     }
   };

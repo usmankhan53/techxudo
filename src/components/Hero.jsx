@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../css/Hero.module.css';
-import { FaBars, FaTimes, FaLocationArrow, FaGlobe, FaCode, FaMobileAlt, FaShoppingCart  } from 'react-icons/fa';
+import { FaBars, FaTimes, FaCode, FaMobileAlt, FaShoppingCart } from 'react-icons/fa';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function HeroNavbar() {
@@ -8,6 +8,7 @@ function HeroNavbar() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [hideTimeout, setHideTimeout] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -30,19 +31,30 @@ function HeroNavbar() {
     }, 3000)); // 3 seconds delay
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.heroContainer}>
       <video className={styles.videoBackground} autoPlay muted loop>
-        <source src="https://diffco.us/wp-content/themes/diffconew/static-template/build/images/home-v5/video/main_screen_04_2024.mp4" type="video/mp4" />
+        <source src="/videos/bgvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.logo}>techxudo</div>
         <div className={styles.menuIcon} onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
-        <ul className={`${styles.navLinks} ${isOpen ? styles.active : ''}`}>
-          <li><a href="#aboutus">About us</a></li>
+        <ul className={`${styles.navLinks} ${isOpen ? styles.active : ''} `}>
+          <li><a href="#aboutus" >About us</a></li>
           <li
             onMouseEnter={() => showMegaMenu('services')}
             onMouseLeave={hideMegaMenu}
@@ -51,7 +63,7 @@ function HeroNavbar() {
             {isMegaMenuOpen && activeMenu === 'services' && (
               <div className={styles.megaMenu}>
                 <div className={styles.megaMenuItem}>Web Design and Development</div>
-                <div className={styles.megaMenuItem}>Wordpress</div>
+                <div className={styles.megaMenuItem}>WordPress</div>
                 <div className={styles.megaMenuItem}>Web Applications</div>
                 <div className={styles.megaMenuItem}>Mobile Applications</div>
                 <div className={styles.megaMenuItem}>Desktop Applications</div>
@@ -71,12 +83,6 @@ function HeroNavbar() {
       </nav>
 
       <div className={styles.heroContent}>
-        <div className={styles.locationinfoContainer}>
-          <span className={styles.locationIcon}><FaLocationArrow /></span>
-          <span style={{ fontWeight: 'normal' }}>Based in <span style={{ fontWeight: 'bold' }}>UK</span> Operate <span style={{ fontWeight: 'bold' }}>worldwide</span></span>
-          <span className={styles.globeIcon}><FaGlobe /></span>
-        </div>
-
         <div className={styles.heroTitleContainer}>
           <h1 className={styles.heroTitle}>
             Empower your business
@@ -87,23 +93,34 @@ function HeroNavbar() {
         <div className={styles.cardContainer}>
           <div className={styles.card}>
             <FaCode className={styles.icon} />
-            <h3>Custom software development </h3>
-            <p>Build software tailored to your business</p>
-            <AiOutlineArrowRight className={styles.arrow} />
+            <h3>Custom Software Development</h3>
+            <p>
+              Our custom software development services offer tailor-made solutions that meet your specific business needs. 
+              From initial consultation to final implementation, our team ensures that the software aligns perfectly with your 
+              operations, providing seamless integration and scalability for future growth.
+            </p>
+            {/* <AiOutlineArrowRight className={styles.arrow} /> */}
           </div>
           <div className={styles.card}>
             <FaMobileAlt className={styles.icon} />
             <h3>Mobile Apps</h3>
-            <p>Develop seamless mobile applications.</p>
-            <AiOutlineArrowRight className={styles.arrow} />
+            <p>
+              We create innovative mobile applications that provide an exceptional user experience. Whether you need an iOS 
+              or Android app, our developers use the latest technologies to deliver high-performance applications that engage 
+              users and meet your business objectives.
+            </p>
+            {/* <AiOutlineArrowRight className={styles.arrow} /> */}
           </div>
           <div className={styles.card}>
             <FaShoppingCart className={styles.icon} />
             <h3>E-commerce Development</h3>
-            <p>Build robust e-commerce platforms.</p>
-            <AiOutlineArrowRight className={styles.arrow} />
+            <p>
+              Build a robust online store with our e-commerce development services. We design and develop scalable 
+              e-commerce platforms that offer a seamless shopping experience, secure payment gateways, and advanced features 
+              to enhance your online presence and drive sales.
+              </p>
+            {/* <AiOutlineArrowRight className={styles.arrow} /> */}
           </div>
-
         </div>
       </div>
     </div>

@@ -3,11 +3,11 @@ import styles from '../css/Industry.module.css';
 import { FaStethoscope, FaDollarSign, FaLaptop, FaShoppingCart, FaCloud, FaBriefcase, FaFilm, FaRobot } from 'react-icons/fa';
 
 const industries = [
-  { 
-    title: "Healthcare", 
-    icon: <FaStethoscope style={{ color: '#28a745' }} className={styles.icon} />, 
-    content: "Innovative solutions for the healthcare industry, enhancing patient care and operational efficiency." 
-  },
+  // { 
+  //   title: "Healthcare", 
+  //   icon: <FaStethoscope style={{ color: '#28a745' }} className={styles.icon} />, 
+  //   content: "Innovative solutions for the healthcare industry, enhancing patient care and operational efficiency." 
+  // },
   { 
     title: "Finance", 
     icon: <FaDollarSign style={{ color: '#17a2b8' }} className={styles.icon} />, 
@@ -38,11 +38,11 @@ const industries = [
     icon: <FaFilm style={{ color: '#fd7e14' }} className={styles.icon} />, 
     content: "Innovative media and entertainment solutions to captivate and engage audiences." 
   },
-  { 
-    title: "AI", 
-    icon: <FaRobot style={{ color: '#6f42c1' }} className={styles.icon} />, 
-    content: "AI-driven solutions to revolutionize industries and create smarter applications." 
-  }
+  // { 
+  //   title: "AI", 
+  //   icon: <FaRobot style={{ color: '#6f42c1' }} className={styles.icon} />, 
+  //   content: "AI-driven solutions to revolutionize industries and create smarter applications." 
+  // }
 ];
 
 function Industry() {

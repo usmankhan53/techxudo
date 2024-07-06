@@ -5,8 +5,8 @@
     width: 100%;
     min-height: 100vh; /* Full viewport height */
     overflow: hidden;
+    padding-top: 60px; /* Adjust this value based on your navbar height */
 }
-
 .videoBackground {
     position: absolute;
     top: 0;
@@ -23,12 +23,24 @@
     align-items: center;
     padding: 10px 20px;
     color: white;
-    position: sticky; /* Make the navbar fixed */
+    position: fixed; /* Fixed position to ensure the navbar is always visible */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10; /* Ensure the navbar is above the hero section */
+    transition: background-color 0.3s, color 0.3s;
 }
+
+/* Navbar styles for when the user scrolls */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background with slight opacity */
+    color: black; /* Change text color to black */
+}
+
+.navbar.scrolled .navLinks a {
+    color: black; /* Change link color to black when scrolled */
+}
+
 
 .navbar:hover .navLinks a {
     color: gray;
@@ -63,8 +75,9 @@
 .navLinks a {
     color: white;
     text-decoration: none;
-    font-size: 17px;
-    font-family: bold;
+    font-size: 23px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold; /* Changed from font-family: bold to font-weight: bold */
     transition: color 0.3s;
 }
 
@@ -146,7 +159,6 @@
     transform: translateY(-5px);
     cursor: pointer;
     font-weight: bold;
-   
 }
 
 .locationinfoContainer {
@@ -219,15 +231,15 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 20px;
+    padding: 30px; /* Increased padding for better spacing */
     width: 80%;
     max-width: 400px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     color: white;
     position: relative;
-    height: 200px; /* Fixed height */
-    overflow: hidden; /* Hide overflow content */
+    min-height: 200px; /* Use min-height instead of fixed height */
+    overflow: auto; /* Allow scrolling if content exceeds the card size */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensure content is spaced evenly */
@@ -268,7 +280,7 @@
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
-   -webkit-backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 /* Responsive Styles */
@@ -343,7 +355,7 @@
 }
 
 @media (max-width: 884px) {
-    .megaMenu{
+    .megaMenu {
         width: fit-content;
     }
 }
@@ -353,6 +365,4 @@
         font-size: 30px;
         line-height: 40px;
     }
-
-    
 }
