@@ -30,16 +30,10 @@ function Clients() {
       </p>
       <div className={styles.slider}>
         <div className={styles.slideTrack}>
-          {clients.map((client, index) => (
+          {clients.concat(clients).map((client, index) => ( // Concatenate clients to make them repeat
             <div key={index} className={styles.slide}>
               {client.icon}
-              <span>{client.name}</span>
-            </div>
-          ))}
-          {clients.map((client, index) => (
-            <div key={index + clients.length} className={styles.slide}>
-              {client.icon}
-              <span>{client.name}</span>
+              <span className={styles.clientName}>{client.name}</span>
             </div>
           ))}
         </div>

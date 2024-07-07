@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
 import styles from '../css/Hero.module.css';
 import { FaBars, FaTimes, FaCode, FaMobileAlt, FaShoppingCart } from 'react-icons/fa';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+// import { AiOutlineArrowRight } from 'react-icons/ai';
 
 function HeroNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,20 @@ function HeroNavbar() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [hideTimeout, setHideTimeout] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+
+  const titles = [
+    "Transforming Dreams into Digital Reality",
+    "Redefine Your online Presence "
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitleIndex(prevIndex => (prevIndex + 1) % titles.length);
+    }, 3000); // Change title every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [titles.length]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -41,6 +56,13 @@ function HeroNavbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  
+
+  const navigate = useNavigate();
+
+  const handlechatClick = ()=>{
+    navigate('/contact')
+  }
 
   return (
     <div className={styles.heroContainer}>
@@ -54,38 +76,37 @@ function HeroNavbar() {
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
         <ul className={`${styles.navLinks} ${isOpen ? styles.active : ''} `}>
-          <li><a href="#aboutus" >About us</a></li>
+          <li><Link to="/about">About us</Link></li> {/* Updated to use Link */}
           <li
             onMouseEnter={() => showMegaMenu('services')}
             onMouseLeave={hideMegaMenu}
           >
-            <a href="#services">Services</a>
+            <a>Services</a> {/* No Link here, as it's just a trigger */}
             {isMegaMenuOpen && activeMenu === 'services' && (
               <div className={styles.megaMenu}>
-                <div className={styles.megaMenuItem}>Web Design and Development</div>
-                <div className={styles.megaMenuItem}>WordPress</div>
                 <div className={styles.megaMenuItem}>Web Applications</div>
-                <div className={styles.megaMenuItem}>Mobile Applications</div>
-                <div className={styles.megaMenuItem}>Desktop Applications</div>
-                <div className={styles.megaMenuItem}>Graphic Designing</div>
-                <div className={styles.megaMenuItem}>Content Writing</div>
-                <div className={styles.megaMenuItem}>SEO</div>
-                <div className={styles.megaMenuItem}>Smart Contracts</div>
-                <div className={styles.megaMenuItem}>Magento</div>
-                <div className={styles.megaMenuItem}>Shopify Plus</div>
-                <div className={styles.megaMenuItem}>Shopify</div>
+                <div className={styles.megaMenuItem}>Websites</div>
+                <div className={styles.megaMenuItem}>E-commerce</div>
+                <div className={styles.megaMenuItem}>CMS Development</div>
+                <div className={styles.megaMenuItem}>CRM Development</div>
+                <div className={styles.megaMenuItem}>ERP Development</div>
+                <div className={styles.megaMenuItem}>Mobile Application</div>
+                <div className={styles.megaMenuItem}>Smart Contract</div>
+                <div className={styles.megaMenuItem}>DevOps</div>
+                <div className={styles.megaMenuItem}>Digital Marketing</div>
               </div>
             )}
           </li>
-          <li><a href="#contacts">Contacts</a><span className={styles.dot}>•</span></li>
+          <li><Link to="/contact">Contacts</Link></li> {/* Updated to use Link */}
+          <li><Link to="/portfolio">Portfolio</Link></li> {/* Updated to use Link */}
         </ul>
-        <button className={styles.chatButton}>Let's chat</button>
+        <button onClick={handlechatClick} className={styles.chatButton}>Let's chat</button>
       </nav>
 
       <div className={styles.heroContent}>
         <div className={styles.heroTitleContainer}>
           <h1 className={styles.heroTitle}>
-            Empower your business
+            {titles[currentTitleIndex]}
             <br />with <span className={styles.gradientText}>top-class software development</span>
           </h1>
         </div>
@@ -118,7 +139,7 @@ function HeroNavbar() {
               Build a robust online store with our e-commerce development services. We design and develop scalable 
               e-commerce platforms that offer a seamless shopping experience, secure payment gateways, and advanced features 
               to enhance your online presence and drive sales.
-              </p>
+            </p>
             {/* <AiOutlineArrowRight className={styles.arrow} /> */}
           </div>
         </div>

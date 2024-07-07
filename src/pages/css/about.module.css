@@ -1,0 +1,127 @@
+/* General container */
+.aboutContainer {
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+    background-image: url('./bg.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Glassmorphism container */
+  .glassmorphismContainer {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  /* Section titles */
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Section content */
+  .sectionContent {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* CEO section */
+  .ceoSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .ceoImage {
+    border-radius: 50%;
+    width: 180px; /* Adjust size as needed */
+    height: 180px; /* Adjust size as needed */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .ceoImage:hover {
+    transform: scale(1.05);
+  }
+  
+  .ceoText {
+    flex: 1;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .aboutContainer {
+      padding: 10px;
+    }
+  
+    .glassmorphismContainer {
+      margin: 10px;
+      padding: 20px;
+    }
+  
+    .sectionTitle {
+      font-size: 1.8rem;
+    }
+  
+    .sectionContent {
+      font-size: 1rem;
+    }
+  
+    .ceoSection {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .ceoImage {
+      width: 150px; /* Adjust size as needed */
+      height: 150px; /* Adjust size as needed */
+    }
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

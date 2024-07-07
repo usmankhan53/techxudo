@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../css/Form.module.css';
+import { FaLightbulb, FaUsers, FaHeadset } from 'react-icons/fa';
 
 function Form() {
     return (
@@ -28,9 +29,15 @@ function Form() {
                     We offer top-notch solutions tailored to your needs. Our team of experts is dedicated to providing the best service.
                 </p>
                 <ul className={styles.infoList}>
-                    <li className={styles.infoListItem}>Innovative Solutions</li>
-                    <li className={styles.infoListItem}>Experienced Team</li>
-                    <li className={styles.infoListItem}>24/7 Support</li>
+                    <li className={styles.infoListItem}>
+                        <FaLightbulb className={styles.infoIcon} /> Innovative Solutions
+                    </li>
+                    <li className={styles.infoListItem}>
+                        <FaUsers className={styles.infoIcon} /> Experienced Team
+                    </li>
+                    <li className={styles.infoListItem}>
+                        <FaHeadset className={styles.infoIcon} /> 24/7 Support
+                    </li>
                 </ul>
             </div>
         </div>

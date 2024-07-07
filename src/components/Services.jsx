@@ -1,21 +1,10 @@
 import React from 'react';
 import styles from '../css/Services.module.css';
-import { FaLaptopCode, FaWordpress, FaMobileAlt, FaDesktop, FaPencilAlt, FaPenFancy, FaSearch, FaEthereum, FaMagento, FaShopify } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { FaLaptopCode, FaMobileAlt, FaEthereum, FaDev, FaBullhorn, FaStore, FaDesktop, FaDatabase, FaServer, FaChartLine } from 'react-icons/fa';
 
 function Services() {
   const services = [
-    { 
-      title: "Web Design and Development", 
-      description: "Creating stunning websites tailored to your needs.", 
-      tags: ["Responsive", "UI/UX", "SEO"], 
-      icon: <FaLaptopCode style={{ color: '#007bff' }} /> // Blue color for code-related services
-    },
-    { 
-      title: "WordPress", 
-      description: "Building dynamic and powerful WordPress websites.", 
-      tags: ["Themes", "Plugins", "Customization"], 
-      icon: <FaWordpress style={{ color: '#21759b' }} /> // Blue color for WordPress
-    },
     { 
       title: "Web Applications", 
       description: "Developing robust web applications with modern technologies.", 
@@ -23,60 +12,66 @@ function Services() {
       icon: <FaLaptopCode style={{ color: '#28a745' }} /> // Green color for web applications
     },
     { 
-      title: "Mobile Applications", 
+      title: "Websites", 
+      description: "Creating stunning websites tailored to your needs.", 
+      tags: ["Responsive", "UI/UX", "SEO"], 
+      icon: <FaDesktop style={{ color: '#007bff' }} /> // Blue color for websites
+    },
+    { 
+      title: "E-commerce Stores", 
+      description: "Building and customizing eCommerce sites.", 
+      tags: ["Shopify", "Magento", "WooCommerce"], 
+      icon: <FaStore style={{ color: '#ff6347' }} /> // Red color for e-commerce stores
+    },
+    { 
+      title: "CMS Development", 
+      description: "Creating content management systems for easy content handling.", 
+      tags: ["WordPress", "Drupal", "Joomla"], 
+      icon: <FaDatabase style={{ color: '#6f42c1' }} /> // Purple color for CMS development
+    },
+    { 
+      title: "CRM Development", 
+      description: "Developing customer relationship management systems.", 
+      tags: ["Salesforce", "Zoho", "Custom CRM"], 
+      icon: <FaChartLine style={{ color: '#fd7e14' }} /> // Orange color for CRM development
+    },
+    { 
+      title: "ERP Development", 
+      description: "Creating enterprise resource planning systems for businesses.", 
+      tags: ["SAP", "Odoo", "Custom ERP"], 
+      icon: <FaServer style={{ color: '#ffc107' }} /> // Yellow color for ERP development
+    },
+    { 
+      title: "Mobile Application Development", 
       description: "Creating mobile applications for both iOS and Android.", 
       tags: ["Swift", "Kotlin", "React Native"], 
-      icon: <FaMobileAlt style={{ color: '#ffc107' }} /> // Yellow color for mobile apps
+      icon: <FaMobileAlt style={{ color: '#20c997' }} /> // Green color for mobile apps
     },
     { 
-      title: "Desktop Applications", 
-      description: "Building desktop applications for various platforms.", 
-      tags: ["Electron", "C#", "Java"], 
-      icon: <FaDesktop style={{ color: '#fd7e14' }} /> // Orange color for desktop apps
-    },
-    { 
-      title: "Graphic Designing", 
-      description: "Designing eye-catching graphics for your brand.", 
-      tags: ["Logos", "Banners", "Illustrations"], 
-      icon: <FaPencilAlt style={{ color: '#e83e8c' }} /> // Pink color for graphic design
-    },
-    { 
-      title: "Content Writing", 
-      description: "Providing high-quality content writing services.", 
-      tags: ["Articles", "Blogs", "Copywriting"], 
-      icon: <FaPenFancy style={{ color: '#6f42c1' }} /> // Purple color for writing
-    },
-    { 
-      title: "SEO", 
-      description: "Optimizing your website to rank higher on search engines.", 
-      tags: ["Keywords", "Backlinks", "On-page SEO"], 
-      icon: <FaSearch style={{ color: '#6610f2' }} /> // Dark blue color for SEO
-    },
-    { 
-      title: "Smart Contracts", 
+      title: "Smart Contract Development", 
       description: "Developing secure smart contracts for blockchain.", 
       tags: ["Ethereum", "Solidity", "DeFi"], 
       icon: <FaEthereum style={{ color: '#3c3c3b' }} /> // Ethereum color
     },
     { 
-      title: "Magento", 
-      description: "Building and customizing eCommerce sites with Magento.", 
-      tags: ["Themes", "Extensions", "Customization"], 
-      icon: <FaMagento style={{ color: '#ff5e57' }} /> // Magento color
+      title: "DevOps", 
+      description: "Implementing DevOps practices for continuous integration and delivery.", 
+      tags: ["CI/CD", "Docker", "Kubernetes"], 
+      icon: <FaDev style={{ color: '#6610f2' }} /> // Dark blue color for DevOps
     },
     { 
-      title: "Shopify Plus", 
-      description: "Creating high-performance eCommerce stores with Shopify Plus.", 
-      tags: ["Themes", "Apps", "Customization"], 
-      icon: <FaShopify style={{ color: '#96c93d' }} /> // Shopify Plus color
-    },
-    { 
-      title: "Shopify", 
-      description: "Developing scalable eCommerce stores with Shopify.", 
-      tags: ["Themes", "Apps", "Customization"], 
-      icon: <FaShopify style={{ color: '#5b9bd5' }} /> // Shopify color
+      title: "Digital Marketing", 
+      description: "Promoting your brand through effective digital marketing strategies.", 
+      tags: ["SEO", "PPC", "Social Media"], 
+      icon: <FaBullhorn style={{ color: '#e83e8c' }} /> // Pink color for digital marketing
     },
   ];
+
+  const navigate = useNavigate();
+
+  const handlechatClick = () => {
+    navigate('/contact'); // Navigate to the portfolio page
+  };
 
   return (
     <section className={styles.services}>
@@ -92,9 +87,9 @@ function Services() {
             <div className={styles.tags}>
               {service.tags.map((tag, idx) => (
                 <span key={idx}>{tag}</span>
-              ))}
+              ))}   
             </div>
-            <button className={styles.button}>Let's chat <span>&rarr;</span></button>
+            <button onClick={handlechatClick} className={styles.button}>Let's chat <span>&rarr;</span></button>
           </div>
         ))}
       </div>

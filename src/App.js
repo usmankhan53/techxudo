@@ -1,26 +1,20 @@
-import HeroNavbar from "./components/Hero";
-import Services from "./components/Services";
-import Industry from "./components/Industry";
-import Technologies from "./components/Technologies";
-import Portfolios from "./components/Portfolios";
-import Clients from "./components/Clients";
-import Reviews from "./components/Reviews";
-import Form from "./components/Form";
-import Footer from "./components/Footer";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/home';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
   return (
-    <>
-   <HeroNavbar/>
-   <Services/>
-   <Industry/>
-   <Technologies/>
-   <Portfolios/>
-   <Clients/>     
-   <Reviews/>
-   <Form/>
-   <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 

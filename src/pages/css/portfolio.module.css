@@ -84,35 +84,6 @@
   .star.filled {
     color: #ffcc00; /* Filled star color */
   }
-
-
-/* Add button container */
-.buttonContainer {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-/* View all button styles */
-.viewAllButton {
-  background-color: #ff6347; /* Primary color for button */
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.viewAllButton:hover {
-  background-color: #ff4500; /* Darker shade on hover */
-  transform: scale(1.05);
-}
-
-.viewAllButton:focus {
-  outline: none;
-}
-
   
   @keyframes fadeIn {
     from {
