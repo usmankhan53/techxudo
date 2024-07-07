@@ -14,7 +14,7 @@ function HeroNavbar() {
 
   const titles = [
     "Transforming Dreams into Digital Reality",
-    "Redefine Your online Presence "
+    "Redefine Your online Presence with us "
   ];
 
   useEffect(() => {
@@ -107,7 +107,7 @@ function HeroNavbar() {
         <div className={styles.heroTitleContainer}>
           <h1 className={styles.heroTitle}>
             {titles[currentTitleIndex]}
-            <br />with <span className={styles.gradientText}>top-class software development</span>
+            {/* <br />with <span className={styles.gradientText}>top-class software development</span> */}
           </h1>
         </div>
 

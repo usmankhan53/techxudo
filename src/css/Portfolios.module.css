@@ -1,16 +1,15 @@
 .portfolios {
     padding: 2rem;
-    background-image: url('./bg.png'); /* Replace with your background image */
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation: fadeIn 1s ease-out; /* Animation for fading in the section */
+    background-color: white;
+    color: black;
   }
   
   .heading {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
+    border: 4px solid black;
     margin-bottom: 1.5rem;
     background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Glassmorphism effect */
@@ -28,13 +27,13 @@
   }
   
   .card {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    background: rgba(4, 5, 8, 0.1); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Glassmorphism effect */
     -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -60,13 +59,13 @@
   
   .title {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 0.5rem;
   }
   
   .description {
     font-size: 1rem;
-    color: #bbbbbb;
+    color: #1b1919;
   }
   
   .rating {

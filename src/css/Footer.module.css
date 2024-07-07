@@ -1,12 +1,10 @@
 /* General Footer Styles */
 .footer {
    
-    background-image: url('./bg.png'); /* Replace with your background image */
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
     padding: 2rem;
    
-    color: #ffffff;
+    color: black;
  
     text-align: center;
 }
@@ -39,7 +37,7 @@
     right: -1rem; /* Adjust as needed */
     top: 50%;
     transform: translateY(-50%);
-    color: #ffffff; /* Color of the vertical line */
+    color: #000000; /* Color of the vertical line */
 }
 
 /* Logo */
@@ -57,7 +55,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #ffffff; /* Primary color */
+    color: #000000; /* Primary color */
 }
 
 .contactDetails p, .address p {

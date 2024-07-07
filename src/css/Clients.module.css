@@ -1,9 +1,6 @@
 .clients {
   padding: 2rem;
-  background-image: url('./bg.png'); /* Background image */
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: fadeIn 1s ease-out;
+  background-color: black;
 }
 
 .heading {

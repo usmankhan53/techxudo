@@ -1,9 +1,6 @@
 .technologies {
   padding: 2rem;
-  background-image: url('./bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: fadeIn 1s ease-out; /* Animation for fading in the section */
+  background-color: black;
 }
 
 .heading {

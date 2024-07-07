@@ -1,10 +1,7 @@
 /* General Styles */
 .reviews {
   padding: 2rem;
-  background-image: url('./bg.png'); /* Replace with your background image */
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: fadeIn 1s ease-out;
+ background-color: black;
 }
 
 .heading {

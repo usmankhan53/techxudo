@@ -93,7 +93,7 @@ function Technologies() {
       ]
     },
     web3: {
-      title: 'Web3',
+      title: 'Web 3.0',
       icons: [
         { icon: <SiEthereum key="ethereum" />, color: iconColors.SiEthereum },
         { icon: <SiSolidity key="solidity" />, color: iconColors.SiSolidity },

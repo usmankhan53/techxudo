@@ -1,9 +1,6 @@
 .industry {
   padding: 2rem;
-  background-image: url('./bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: fadeIn 1s ease-out; /* Animation for fading in the entire section */
+  background-color: black;
 }
 
 .heading {
