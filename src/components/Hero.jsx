@@ -97,10 +97,10 @@ function HeroNavbar() {
               </div>
             )}
           </li>
-          <li><Link to="/contact">Contacts</Link></li> {/* Updated to use Link */}
+          <li><Link to="/contact">Contact Us</Link></li> {/* Updated to use Link */}
           <li><Link to="/portfolio">Portfolio</Link></li> {/* Updated to use Link */}
         </ul>
-        <button onClick={handlechatClick} className={styles.chatButton}>Let's chat</button>
+        <a href='https://wa.me/923378426564?text=' className={styles.chatButton}>Let's chat</a>
       </nav>
 
       <div className={styles.heroContent}>

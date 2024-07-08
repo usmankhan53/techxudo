@@ -1,7 +1,9 @@
 /* General Styles */
 .reviews {
   padding: 2rem;
- background-color: black;
+  background-image: url('./bgiii.png'); /* Background image */
+  background-size: cover;
+  background-position: center;
 }
 
 .heading {

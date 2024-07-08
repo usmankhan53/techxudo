@@ -1,7 +1,8 @@
 .services {
-    /* background-image: url('./bg.png');
+    /* background-image: url('./bgiii.png');
     background-repeat: no-repeat;
     background-size: cover; */
+    background-color: rgba(4, 4, 4, 0.885);
     padding: 2rem;
   }
   
@@ -9,9 +10,9 @@
    text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 1.5rem;
-    border: 4px solid black;
+    /* border: 4px solid black; */
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Glassmorphism effect */
     -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
@@ -30,10 +31,10 @@
   .serviceCard {
     background: rgba(197, 190, 190, 0.21);
     border-radius: 16px;
-    box-shadow: 0 4px 4px #006bb6;
+    box-shadow: 0 4px 30px #1b1a1a6f;
     backdrop-filter: blur(8.5px);
     -webkit-backdrop-filter: blur(8.5px);
-    border: 3px solid #006bb6;
+    /* border: 3px solid #006bb6; */
     padding: 1.5rem;
     flex: 1 1 calc(50% - 1.5rem);
     box-sizing: border-box;
@@ -55,12 +56,12 @@
   .serviceCard h3 {
     margin-top: 0;
     font-size: 1.25rem;
-    color: #000000;
+    color: #ffffff;
   }
   
   .serviceCard p {
     font-size: 0.875rem;
-    color: #000000;
+    color: #ffffff;
     margin: 1rem 0;
   }
   
@@ -131,8 +132,8 @@
   }
   
   .button {
-    color: rgb(0, 0, 0);
-    background: rgba(255, 255, 255, 0.17);
+    color: rgb(255, 255, 255);
+    background: rgba(189, 186, 186, 0.17);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.8px);
