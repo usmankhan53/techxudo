@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: row; /* Ensure that items are in a row */
     padding: 2rem;
-    background-color: rgba(4, 4, 4, 0.885);
+    background-color: #58519e;
+
     justify-content: space-between; /* Space between form and new section */
     align-items: center; /* Center items vertically */
 }

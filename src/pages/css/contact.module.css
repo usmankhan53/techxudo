@@ -4,9 +4,10 @@
     min-height: 100vh;
     padding: 20px;
     color: #fff;
-    background-image: url('./bg.png'); /* Background image */
+    /* background-image: url('./bg.png');
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background-color:  #58519e;
     overflow: hidden;
     animation: fadeIn 2s ease-out;
     display: flex;

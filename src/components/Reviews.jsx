@@ -30,7 +30,7 @@ function Reviews() {
       text: "Syed is a very skilled and well-rounded expert. I've been collaborating with him on my denimbmc.com blog."
     },
     {
-      name: 'DayMonesha',
+      name: 'DyMonesha Brown',
       image: '/images/Dymonesha.png',
       text: "Syed is a great person to work with. He goes above and beyond to complete asthethically pleasing website designs."
     },

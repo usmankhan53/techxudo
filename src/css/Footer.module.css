@@ -3,22 +3,20 @@
     padding: 2rem;
    
     color: rgb(255, 255, 255);
-    background-image: url('./bgiii.png'); /* Background image */
+    /* background-image: url('./bgiii.png'); 
     background-size: cover;
     background-position: center;
- 
+  */
     text-align: center;
+    background-color: #58519e;
+    
 }
 
 /* Container */
 .container {
     display: flex;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+   
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;

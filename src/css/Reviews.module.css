@@ -1,24 +1,21 @@
 /* General Styles */
 .reviews {
   padding: 2rem;
-  background-image: url('./bgiii.png'); /* Background image */
-  background-size: cover;
-  background-position: center;
+  background-color: #8075e5;
+  text-align: center;
 }
 
 .heading {
-  text-align: center;
   font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 0.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  animation: bounceIn 1s;
+  margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
+  border-radius: 101px;
+  background: #8075e5;
+  box-shadow: inset 10px 10px 14px #58519e,
+              inset -10px -10px 14px #a899ff;
+  padding: 2rem;
+  display: inline-block; /* Shrink-wrap around text */
 }
 
 .subtitle {
@@ -43,7 +40,7 @@
 
 .slideTrack {
   display: flex;
-  width: calc(200%); /* Double the width to ensure a smooth scroll */
+  width: 400%; /* Ensure the track is 4 times the width of the slider to loop slides correctly */
   animation: scroll 60s linear infinite;
 }
 
@@ -52,7 +49,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: calc(100% / 7); /* Adjust based on how many reviews you want to display at once */
+  width: calc(100% / 4 - 1rem); /* Display 4 slides at once */
   padding: 1rem;
   font-size: 1rem;
   color: #ffffff;
@@ -60,7 +57,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
-  margin: 0 0.5rem;
+  margin: 0 0.5rem; /* Maintain space between slides */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   animation: fadeInUp 0.5s ease-out;
   text-align: center;
@@ -141,7 +138,7 @@
       transform: translateX(0);
   }
   100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%); /* Scroll by half of the slideTrack width */
   }
 }
 

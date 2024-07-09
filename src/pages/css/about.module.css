@@ -1,127 +1,169 @@
 /* General container */
 .aboutContainer {
-    position: relative;
-    min-height: 100vh;
-    padding: 20px;
-    color: #fff;
-    background-image: url('./bg.png'); /* Background image */
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    animation: fadeIn 2s ease-out;
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+  background-color: #8075e5;
+  /* background-image: url('./bg.png'); 
+  background-size: cover;
+  background-position: center; */
+  overflow: hidden;
+  animation: fadeIn 2s ease-out;
+  text-align: center; /* Center align text within the container */
+}
+
+/* Glassmorphism container */
+.glassmorphismContainer {
+ text-align: left;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px;
+background: #8075e5;
+box-shadow: inset 10px 10px 14px #58519e,
+            inset -10px -10px 14px #a899ff;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5); /* Dark background with opacity */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Center align text */
+  max-width: 400px; /* Restrict width for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for text contrast */
+  animation: fadeInUp 1s ease-out;
+}
+
+
+/* Section titles */
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Section content */
+.sectionContent {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* CEO section */
+.ceoSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: fadeIn 1s ease-out;
+  justify-content: space-between;
+}
+
+.ceoImage {
+  border-radius: 50%;
+  width: 180px; /* Adjust size as needed */
+  height: 180px; /* Adjust size as needed */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ceoImage:hover {
+  transform: scale(1.05);
+}
+
+.ceoText {
+  flex: 1;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* FAQ Section */
+.faqSection {
+  margin-top: 2rem;
+}
+
+.faqList {
+  margin-top: 1rem;
+}
+
+.faqItem {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.faqQuestion {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.faqArrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem; /* Adjust arrow size as needed */
+}
+
+.arrowDown {
+  transform: rotate(0deg);
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  margin-top: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+
+  .heading {
+    font-size: 2rem; /* Adjust font size for small screens */
+    padding: 0.5rem; /* Adjust padding for small screens */
+    max-width: 100%; /* Ensure it fits within the container */
   }
-  
-  /* Glassmorphism container */
+  .aboutContainer {
+    padding: 10px;
+    text-align: center; /* Ensure text is centered on small screens */
+  }
+
   .glassmorphismContainer {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    animation: slideUp 0.5s ease-out;
+    margin: 10px;
+    padding: 20px;
   }
-  
-  /* Section titles */
+
   .sectionTitle {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 1s ease-out;
+    font-size: 1.8rem;
   }
-  
-  /* Section content */
+
   .sectionContent {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    animation: fadeIn 1.5s ease-out;
+    font-size: 1rem;
   }
-  
-  /* CEO section */
+
   .ceoSection {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    animation: fadeIn 1s ease-out;
+    flex-direction: column;
+    text-align: center;
   }
-  
+
   .ceoImage {
-    border-radius: 50%;
-    width: 180px; /* Adjust size as needed */
-    height: 180px; /* Adjust size as needed */
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
   }
-  
-  .ceoImage:hover {
-    transform: scale(1.05);
-  }
-  
-  .ceoText {
-    flex: 1;
-    animation: fadeIn 1.5s ease-out;
-  }
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .aboutContainer {
-      padding: 10px;
-    }
-  
-    .glassmorphismContainer {
-      margin: 10px;
-      padding: 20px;
-    }
-  
-    .sectionTitle {
-      font-size: 1.8rem;
-    }
-  
-    .sectionContent {
-      font-size: 1rem;
-    }
-  
-    .ceoSection {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .ceoImage {
-      width: 150px; /* Adjust size as needed */
-      height: 150px; /* Adjust size as needed */
-    }
-  }
-  
-  /* Keyframes for animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideUp {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
+}

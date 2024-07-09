@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../css/Services.module.css';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { FaLaptopCode, FaMobileAlt, FaEthereum, FaDev, FaBullhorn, FaStore, FaDesktop, FaDatabase, FaServer, FaChartLine } from 'react-icons/fa';
 
 function Services() {
@@ -8,7 +8,7 @@ function Services() {
     { 
       title: "Web Applications", 
       description: "Developing robust web applications with modern technologies.", 
-      tags: ["React", "Node.js", "APIs"], 
+      tags: ["React", "Node.js", "APIs", "MEAN", "MERN", "LAMP", "GO","Lang"], 
       icon: <FaLaptopCode style={{ color: '#28a745' }} /> // Green color for web applications
     },
     { 
@@ -26,7 +26,7 @@ function Services() {
     { 
       title: "CMS Development", 
       description: "Creating content management systems for easy content handling.", 
-      tags: ["WordPress", "Drupal", "Joomla"], 
+      tags: ["WordPress", "Drupal", "Joomla", "Wix", "Squarespace"], 
       icon: <FaDatabase style={{ color: '#6f42c1' }} /> // Purple color for CMS development
     },
     { 
@@ -44,7 +44,7 @@ function Services() {
     { 
       title: "Mobile Application Development", 
       description: "Creating mobile applications for both iOS and Android.", 
-      tags: ["Swift", "Kotlin", "React Native"], 
+      tags: ["Swift", "Kotlin", "React Native", "Flutter"], 
       icon: <FaMobileAlt style={{ color: '#20c997' }} /> // Green color for mobile apps
     },
     { 
@@ -67,10 +67,11 @@ function Services() {
     },
   ];
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handlechatClick = () => {
-    navigate('/contact'); // Navigate to the portfolio page
+    // navigate('/contact'); // Navigate to the portfolio page
+    window.open("https://wa.me/923378426564?text=");
   };
 
   return (

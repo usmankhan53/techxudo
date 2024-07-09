@@ -1,21 +1,20 @@
 .technologies {
   padding: 2rem;
-  background-color: rgba(4, 4, 4, 0.885);
+  background: #58519e;
+  text-align: center;
 }
 
 .heading {
-  text-align: center;
   font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 1.5rem;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Glassmorphism effect */
-  -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
-  border-radius: 12px; /* Rounded corners for heading */
-  padding: 0.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  animation: bounceIn 1s; /* Animation for bouncing in the heading */
+  margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
+  border-radius: 101px;
+  background: #8075e5;
+  box-shadow: inset 10px 10px 14px #58519e,
+              inset -10px -10px 14px #a899ff;
+  padding: 2rem;
+  display: inline-block; /* Shrink-wrap around text */
 }
 
 .tabs {

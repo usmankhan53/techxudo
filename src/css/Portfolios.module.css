@@ -1,91 +1,91 @@
 .portfolios {
-    padding: 2rem;
-   
-    background-image: url('./bgiii.png'); /* Background image */
-  background-size: cover;
-  background-position: center;
-  }
-  
-  .heading {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    border: 4px solid black;
-    margin-bottom: 1.5rem;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
-    border-radius: 12px; /* Rounded corners for heading */
-    padding: 0.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    animation: bounceIn 1s; /* Animation for bouncing in the heading */
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .card {
-    background: rgba(4, 5, 8, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-  
-  .image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .content {
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0); /* Semi-transparent background */
-    backdrop-filter: blur(20px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(20px); /* For WebKit browsers */
-    border-radius: 12px;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-  }
-  
-  .description {
-    font-size: 1rem;
-    color: #bbbaba;
-  }
-  
-  .rating {
-    display: flex;
-    gap: 0.2rem; /* Space between stars */
-    margin-top: 0.5rem;
-  }
-  
-  .star {
-    font-size: 1.5rem; /* Star size */
-    color: #ddd; /* Default star color */
-    transition: color 0.3s ease;
-  }
-  
-  .star.filled {
-    color: #ffcc00; /* Filled star color */
-  }
+  padding: 2rem;
+  background-color: #8075e5;
+  text-align: center;
+}
 
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
+  border-radius: 101px;
+  background: #8075e5;
+  box-shadow: inset 10px 10px 14px #58519e,
+              inset -10px -10px 14px #a899ff;
+  padding: 2rem;
+  display: inline-block; /* Shrink-wrap around text */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+  gap: 1.5rem;
+  max-width: 1200px; /* Optional: Set a max-width for better control on large screens */
+  margin: 0 auto; /* Center the grid horizontally */
+}
+
+.card {
+  background: rgba(4, 5, 8, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is evenly spaced */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0); /* Semi-transparent background */
+  backdrop-filter: blur(20px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(20px); /* For WebKit browsers */
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.description {
+  font-size: 1rem;
+  color: #bbbaba;
+}
+
+.rating {
+  display: flex;
+  gap: 0.2rem; /* Space between stars */
+  margin-top: 0.5rem;
+}
+
+.star {
+  font-size: 1.5rem; /* Star size */
+  color: #ddd; /* Default star color */
+  transition: color 0.3s ease;
+}
+
+.star.filled {
+  color: #ffcc00; /* Filled star color */
+}
 
 /* Add button container */
 .buttonContainer {
@@ -114,37 +114,35 @@
   outline: none;
 }
 
-  
-  @keyframes fadeIn {
-    from {
+@keyframes fadeIn {
+  from {
       opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
   }
-  
-  @keyframes bounceIn {
-    0% {
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
       opacity: 0;
       transform: scale(0.3);
-    }
-    50% {
+  }
+  50% {
       opacity: 1;
       transform: scale(1.05);
-    }
-    100% {
+  }
+  100% {
       transform: scale(1);
-    }
   }
-  
-  @media (max-width: 768px) {
-    .grid {
+}
+
+@media (max-width: 768px) {
+  .grid {
       grid-template-columns: 1fr; /* Single column on small screens */
-    }
-  
-    .heading {
-      font-size: 1.5rem;
-    }
   }
-  
+
+  .heading {
+      font-size: 1.5rem;
+  }
+}
