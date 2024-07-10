@@ -5,7 +5,8 @@
   background-position: center;
  */
 
- background-color: rgb(128,117,229);
+ /* background-color: rgb(128,117,229); */
+ background-color: white;
  text-align: center;
 }
 
@@ -14,7 +15,7 @@
   font-weight: bold;
   color: #ffffff;
   margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
-  border-radius: 101px;
+  border-radius: 20px;
   background: #8075e5;
   box-shadow: inset 10px 10px 14px #58519e,
               inset -10px -10px 14px #a899ff;
@@ -39,7 +40,7 @@
   align-items: center;
   border: 2px solid transparent;
   transition: all 0.3s ease;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 12px; /* Slightly rounded corners for tabs */
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glassmorphism effect */
@@ -56,7 +57,7 @@
 }
 
 .activeTab {
-  border-color: #006bb6; /* Color of the border when the tab is active */
+  border-color: #8075e5; /* Color of the border when the tab is active */
   animation: pulse 1s infinite; /* Pulse animation for active tab */
 }
 
@@ -93,12 +94,12 @@
 .content h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 .content p {
   font-size: 1rem;
-  color: #dddddd;
+  color: #000000;
 }
 
 /* Media Queries for Responsiveness */
@@ -157,12 +158,12 @@
 
 @keyframes pulse {
   0% {
-    border-color: #006bb6;
+    border-color: #8075e5;
   }
   50% {
     border-color: #ffffff;
   }
   100% {
-    border-color: #006bb6;
+    border-color: #8075e5;
   }
 }

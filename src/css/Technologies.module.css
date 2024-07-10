@@ -1,6 +1,7 @@
 .technologies {
   padding: 2rem;
-  background: #58519e;
+  /* background: #58519e; */
+  background-color: white;
   text-align: center;
 }
 
@@ -9,7 +10,7 @@
   font-weight: bold;
   color: #ffffff;
   margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
-  border-radius: 101px;
+  border-radius: 20px;
   background: #8075e5;
   box-shadow: inset 10px 10px 14px #58519e,
               inset -10px -10px 14px #a899ff;
@@ -34,7 +35,7 @@
   align-items: center;
   border: 2px solid transparent;
   transition: all 0.3s ease;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 12px; /* Slightly rounded corners for tabs */
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glassmorphism effect */
@@ -53,7 +54,7 @@
 }
 
 .activeTab {
-  border-color: #006bb6; /* Color of the border when the tab is active */
+  border-color: #8075e5; /* Color of the border when the tab is active */
   animation: pulse 1s infinite; /* Pulse animation for active tab */
 }
 
@@ -75,7 +76,7 @@
   font-size: 2rem; /* Increased icon size */
   color: #ffffff; /* Icon color */
   margin: 0.5rem;
-  border: 2px solid #ffffff; /* Icon border color */
+  border: 2px solid #8075e5; /* Icon border color */
   border-radius: 50%;
   padding: 0.5rem;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */

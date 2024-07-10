@@ -1,6 +1,7 @@
 /* Existing styles */
 .heroContainer {
     background-color: #8075e5;
+    /* background-color: white; */
     position: relative;
     width: 100%;
     min-height: 100vh; /* Full viewport height */
@@ -189,11 +190,11 @@
     display: flex;
     justify-content: center; /* Center cards horizontally within the wrapper */
     align-items: center; /* Center cards vertically within the wrapper */
-    transform: rotateX(0deg) rotateY(0deg); /* Ensure proper rotation */
+    /* transform: rotateX(0deg) rotateY(0deg); Ensure proper rotation */
 }
 
 .card {
-    width: 180px; /* Increased card width */
+    width: 130px; /* Increased card width */
     height: 180px; /* Increased card height */
     display: flex;
     align-items: center;
@@ -249,6 +250,21 @@
     transform: rotateY(240deg) translateZ(250px); /* Position the third card */
 }
 
+
+.icons{
+    background: rgba(255, 255, 255, 0.2); /* Slightly opaque white background */
+    backdrop-filter: blur(10px); /* Blur the background for glassmorphism effect */
+    border-radius: 15px; /* Increased border radius for more rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border for a more glass-like appearance */
+    padding: 0.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.ceo{
+   
+    width: 150px;
+}
 @keyframes rotate {
     from {
         transform: rotateY(0deg);

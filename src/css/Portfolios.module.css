@@ -1,6 +1,7 @@
 .portfolios {
   padding: 2rem;
-  background-color: #8075e5;
+  /* background-color: #8075e5; */
+  background-color: white;
   text-align: center;
 }
 
@@ -9,7 +10,7 @@
   font-weight: bold;
   color: #ffffff;
   margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
-  border-radius: 101px;
+  border-radius: 20px;
   background: #8075e5;
   box-shadow: inset 10px 10px 14px #58519e,
               inset -10px -10px 14px #a899ff;
@@ -26,7 +27,7 @@
 }
 
 .card {
-  background: rgba(4, 5, 8, 0.1); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.588); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glassmorphism effect */
   -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
   border-radius: 12px;

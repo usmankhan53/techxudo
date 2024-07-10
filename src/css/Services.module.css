@@ -1,5 +1,6 @@
 .services {
-  background-color: #58519e;;
+  /* background-color: #58519e; */
+  background-color: white;
   padding: 2rem;
   text-align: center; /* Center the text and child elements horizontally */
 }
@@ -9,7 +10,7 @@
   font-weight: bold;
   color: #ffffff;
   margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
-  border-radius: 101px;
+  border-radius: 20px;
   background: #8075e5;
   box-shadow: inset 10px 10px 14px #58519e,
               inset -10px -10px 14px #a899ff;
@@ -52,12 +53,13 @@
 .serviceCard h3 {
   margin-top: 0;
   font-size: 1.25rem;
-  color: #ffffff;
+  font-weight: bold;
+  color: #000000;
 }
 
 .serviceCard p {
   font-size: 0.875rem;
-  color: #ffffff;
+  color: #000000;
   margin: 1rem 0;
 }
 
@@ -127,8 +129,8 @@
 }
 
 .button {
-  color: rgb(255, 255, 255);
-  background: rgba(189, 186, 186, 0.17);
+  color: rgb(0, 0, 0);
+  background: rgba(28, 27, 27, 0.17);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10.8px);
@@ -144,6 +146,7 @@
 
 .button:hover {
   background-color: #48b44a;
+  color: white;
   transform: scale(1.05);
 }
 

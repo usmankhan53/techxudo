@@ -1,7 +1,8 @@
 /* General Styles */
 .reviews {
   padding: 2rem;
-  background-color: #8075e5;
+  /* background-color: #8075e5; */
+  background-color: white;
   text-align: center;
 }
 
@@ -10,7 +11,7 @@
   font-weight: bold;
   color: #ffffff;
   margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
-  border-radius: 101px;
+  border-radius: 20px;
   background: #8075e5;
   box-shadow: inset 10px 10px 14px #58519e,
               inset -10px -10px 14px #a899ff;
@@ -21,9 +22,9 @@
 .subtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(10, 10, 10, 0.065);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
@@ -52,7 +53,7 @@
   width: calc(100% / 4 - 1rem); /* Display 4 slides at once */
   padding: 1rem;
   font-size: 1rem;
-  color: #ffffff;
+  color: #000000;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -87,13 +88,13 @@
 .name {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 0.5rem;
 }
 
 .text {
   font-size: 1rem;
-  color: #ffffff;
+  color: #171717;
   margin-bottom: 1rem;
   white-space: normal; /* Allow text to wrap */
   word-break: break-word; /* Break long words */

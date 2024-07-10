@@ -74,7 +74,7 @@ function Technologies() {
         { icon: <SiDjango key="django" />, color: iconColors.SiDjango },
         { icon: <SiRuby key="ruby" />, color: iconColors.SiRuby },
         { icon: <SiPhp key="php" />, color: iconColors.SiPhp },
-        { icon: <SiReactrouter key="react-router" />, color: iconColors.SiReactrouter }
+        // { icon: <SiReactrouter key="react-router" />, color: iconColors.SiReactrouter }
       ]
     },
     uiux: {

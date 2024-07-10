@@ -1,6 +1,7 @@
 .clients {
   padding: 2rem;
-  background-color: #58519e;
+  /* background-color: #58519e; */
+  background-color: white;
   text-align: center;
 }
 
@@ -9,7 +10,7 @@
   font-weight: bold;
   color: #ffffff;
   margin: 0 auto 1.5rem auto; /* Center horizontally and add bottom margin */
-  border-radius: 101px;
+  border-radius: 20px;
   background: #8075e5;
   box-shadow: inset 10px 10px 14px #58519e,
               inset -10px -10px 14px #a899ff;
@@ -50,7 +51,7 @@
   justify-content: center;
   width: 20%; /* Show 5 slides at once (100% / 5) */
   padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(103, 97, 97, 0.195);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;

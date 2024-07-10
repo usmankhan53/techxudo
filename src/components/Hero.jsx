@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from '../css/Hero.module.css';
+import ceo from '../assets/logo.png'
 import { FaBars, FaTimes, FaCode, FaMobileAlt, FaShoppingCart } from 'react-icons/fa';
 
 function HeroNavbar() {
@@ -106,17 +107,22 @@ function HeroNavbar() {
         <div className={styles.cardContainer}>
           <div className={styles.cardWrapper}>
             <div className={`${styles.card} ${styles.card1}`}>
-              <FaCode size={40} />
+              <FaCode className={styles.icons} size={40} />
               <h3>Custom Software Development</h3>
             </div>
             <div className={`${styles.card} ${styles.card2}`}>
-              <FaMobileAlt size={40} />
+              <FaMobileAlt className={styles.icons} size={40} />
               <h3>Mobile Applications</h3>
             </div>
             <div className={`${styles.card} ${styles.card3}`}>
-              <FaShoppingCart size={40} />
+              <FaShoppingCart className={styles.icons} size={40} />
               <h3>E-commerce Development</h3>
             </div>
+            {/* <div className={`${styles.card} ${styles.card4}`}>
+              <FaShoppingCart className={styles.icons} size={40} />
+              <h3>E-commerce Development</h3>
+            </div> */}
+            <img className={styles.ceo} src={ceo} alt="" />
           </div>
         </div>
       </div>

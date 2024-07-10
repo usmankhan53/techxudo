@@ -8,62 +8,62 @@ function Services() {
     { 
       title: "Web Applications", 
       description: "Developing robust web applications with modern technologies.", 
-      tags: ["React", "Node.js", "APIs", "MEAN", "MERN", "LAMP", "GO","Lang"], 
-      icon: <FaLaptopCode style={{ color: '#28a745' }} /> // Green color for web applications
+      tags: ["APIs", "MEAN", "MERN", "LAMP", "GO Lang"], 
+      icon: <FaLaptopCode style={{ color: "#8075e5" }} /> // Green color for web applications
     },
     { 
       title: "Websites", 
       description: "Creating stunning websites tailored to your needs.", 
       tags: ["Responsive", "UI/UX", "SEO"], 
-      icon: <FaDesktop style={{ color: '#007bff' }} /> // Blue color for websites
+      icon: <FaDesktop style={{ color: "#8075e5" }} /> // Blue color for websites
     },
     { 
       title: "E-commerce Stores", 
       description: "Building and customizing eCommerce sites.", 
       tags: ["Shopify", "Magento", "WooCommerce"], 
-      icon: <FaStore style={{ color: '#ff6347' }} /> // Red color for e-commerce stores
+      icon: <FaStore style={{ color: "#8075e5" }} /> // Red color for e-commerce stores
     },
     { 
       title: "CMS Development", 
       description: "Creating content management systems for easy content handling.", 
       tags: ["WordPress", "Drupal", "Joomla", "Wix", "Squarespace"], 
-      icon: <FaDatabase style={{ color: '#6f42c1' }} /> // Purple color for CMS development
+      icon: <FaDatabase style={{ color: "#8075e5" }} /> // Purple color for CMS development
     },
     { 
       title: "CRM Development", 
       description: "Developing customer relationship management systems.", 
       tags: ["Salesforce", "Zoho", "Custom CRM"], 
-      icon: <FaChartLine style={{ color: '#fd7e14' }} /> // Orange color for CRM development
+      icon: <FaChartLine style={{ color: "#8075e5" }} /> // Orange color for CRM development
     },
     { 
       title: "ERP Development", 
       description: "Creating enterprise resource planning systems for businesses.", 
       tags: ["SAP", "Odoo", "Custom ERP"], 
-      icon: <FaServer style={{ color: '#ffc107' }} /> // Yellow color for ERP development
+      icon: <FaServer style={{ color: '#8075e5' }} /> // Yellow color for ERP development
     },
     { 
       title: "Mobile Application Development", 
       description: "Creating mobile applications for both iOS and Android.", 
       tags: ["Swift", "Kotlin", "React Native", "Flutter"], 
-      icon: <FaMobileAlt style={{ color: '#20c997' }} /> // Green color for mobile apps
+      icon: <FaMobileAlt style={{ color: '#8075e5' }} /> // Green color for mobile apps
     },
     { 
       title: "Smart Contract Development", 
       description: "Developing secure smart contracts for blockchain.", 
       tags: ["Ethereum", "Solidity", "DeFi"], 
-      icon: <FaEthereum style={{ color: '#3c3c3b' }} /> // Ethereum color
+      icon: <FaEthereum style={{ color: '#8075e5' }} /> // Ethereum color
     },
     { 
       title: "DevOps", 
       description: "Implementing DevOps practices for continuous integration and delivery.", 
       tags: ["CI/CD", "Docker", "Kubernetes"], 
-      icon: <FaDev style={{ color: '#6610f2' }} /> // Dark blue color for DevOps
+      icon: <FaDev style={{ color: '#8075e5' }} /> // Dark blue color for DevOps
     },
     { 
       title: "Digital Marketing", 
       description: "Promoting your brand through effective digital marketing strategies.", 
       tags: ["SEO", "PPC", "Social Media"], 
-      icon: <FaBullhorn style={{ color: '#e83e8c' }} /> // Pink color for digital marketing
+      icon: <FaBullhorn style={{ color: '#8075e5' }} /> // Pink color for digital marketing
     },
   ];
 
